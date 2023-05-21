@@ -1,0 +1,238 @@
+
+body {
+    background-color: rgb(197, 166, 166);
+    font-family: 'Poppins', sans-serif;
+}
+
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/fb.jpg) url(../img/insta.jpg);
+}
+
+a {
+    cursor: pointer;
+}
+
+.header-main {
+    width: 100%;
+    height: 70px;
+    background-color: #debf9f;
+    display: flex; 
+    justify-content: space-between;
+
+   
+
+}
+.header-main-logo {
+    width: fit-content;
+    height: 100%;
+    padding-left: 40px;
+    display: flex;
+    cursor: pointer;
+}
+
+.header-main-logo img {
+    height: 70px;
+    align-self: center;
+}
+
+.header-main-nav {
+    width: fit-content;
+    height: 100%;
+
+}
+
+.header-main-nav ul{
+    list-style: none;
+    margin-left: 30px;
+}
+.header-main-nav ul li{
+    display: inline;
+    float: left;
+
+}
+.header-main-nav ul li a{
+ padding: 0 10px;
+ font-family: 'Poppins', sans-serif;
+ line-height: 60px;
+ color: black;
+ display: block;
+ height: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.header-main-nav ul li a:hover{
+    color: rgb(167, 221, 252);
+   }
+
+.header-main-sm {
+    width: fit-content;
+    height: 100%;
+    padding-right: 60px; 
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+.header-main-social-fb {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/fb_transparent.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.header-main-social-fb:hover {
+    background-image: url(../img/fb_transparent.png); 
+}
+
+.header-main-social-ig {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/insta_transparent.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.header-main-social-ig:hover {
+    background-image: url(../img/insta_transparent.png);
+
+    
+}
+
+
+
+
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.packages{
+	font-family: arial;
+	font-size: 16px;
+	margin:0;
+	background: rgb(197, 166, 166);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+}
+img{
+	max-width: 100%;
+}
+.ui-card{
+	width: 350px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+	background:radial-gradient(#111 50%, #000 100%);
+}
+
+.ui-card img{
+	transform: scale(1.3);
+	transition: all 0.3s ease-out;
+}
+.ui-card:hover img{
+	transform: scale(1.1) translateY(-20px); 
+	opacity: 0.3
+}
+.ui-card .description{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+.ui-card .description h3{
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
+}
+.ui-card .description p{
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+.ui-card .description a{
+	color: #fff;
+	background:rgb(197, 166, 166);
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.4s;
+}
+.ui-card .description a:hover{
+	background:#0a83c5;
+}
+.ui-card:hover .description h3{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description a{
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+
+ /*footer*/
+
+ footer {
+    background-color: #debf9f;
+    padding:20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer nav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer nav li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 15px;
+  }
+  
+  footer nav a {
+    color:  rgba(12, 8, 0, 0.825);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1;
+  }
+  
+footer nav a:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+  }
+ 

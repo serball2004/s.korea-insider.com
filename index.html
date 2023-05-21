@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    
+
+     <title>S. Korea Insider</title>
+
+</head>
+
+<body>
+    <header class="header-main">
+        <div class="header-main-logo">
+            <img src="img/logo_transparent.png" alt="Website Logo" href="index.html">
+            <nav class="header-main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="thingstodo.html">THINGS TO DO</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="user feedback.html">FEEDBACK</a></li>
+                    
+                   
+                </ul>
+            </nav>
+            
+             
+        </div>
+       
+    <div class="header-main-sm">
+        <a href="https://web.facebook.com/katrina.luzadas"><div class="header-main-social-fb"></div></a>
+        <a href="https://www.instagram.com/katrina_.gl/?igshid=ZGUzMzM3NWJiOQ%3D%3D"><div class="header-main-social-ig"></div></a>
+    </div>
+    </header>
+
+    <div class="description">
+         <p> South Korea is a beautiful country with a rich cultural heritage, modern cities, and stunning natural landscapes. </p>
+    </div>
+
+    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+      <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea1.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Seoul</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea2.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Seokchon Lake</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea3.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Insadong</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea4.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Namsan</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea5.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Starfield Library</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea6busan.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Busan</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea7.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Myeongdon</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea8busan.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Busan</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea9.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Namsan Tower</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea10.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>HYBE Ent.</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea11.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Seoul</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea12.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Hanbok Rental</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea13.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Traditional bldgs</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea14.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Temples in Busan</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/skorea15.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>Tote world</h2>
+          </div>
+        </div>
+      </div>
+      <div class="slider__nav" style="display: flex;justify-content: center;">
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+  </body>
+
+  
+      
+
+
+
+    
+
+
+    <div id="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312866.433252556!2d127.8733!3d35.819050000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356455ebcb11ba9b%3A0x91249b00ba88db4b!2sSouth%20Korea!5e0!3m2!1sen!2sph!4v1683768248779!5m2!1sen!2sph" 
+      width="900" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    </div>
+    
+    <footer>
+        <nav>
+          <ul>
+            <li><a href="thingstodo.html">TRAVEL</a></li>
+            <li><a href="packages.html">PACKAGES</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2023 .koreaInsider</p>
+      </footer>
+
+    
+</body>
+</html>
